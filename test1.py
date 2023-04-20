@@ -1,4 +1,6 @@
-from ParsePcap import PcapParser
+# 单函数测试
+
+from PcapParser import PcapParser
 
 pp = PcapParser(
     pcap_path="./data/test.pcap",

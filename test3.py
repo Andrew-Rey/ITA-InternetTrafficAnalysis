@@ -1,5 +1,13 @@
-import pyshark
+"""
+PcapParser测试
+"""
 
-cap = pyshark.FileCapture(input_file="./data/test.pcap", tshark_path="D:/Wireshark/tshark.exe", display_filter='ip')
-for pkg in cap:
-    print(pkg.udp)
+from PcapParser import *
+
+pp = PcapParser(
+    pcap_path="./data/part-29h.pcapng",
+    target_csv_dir="./data/all",
+    tshark_path="D:/Wireshark/tshark.exe",
+)
+
+pp.split(split_size=10000)
