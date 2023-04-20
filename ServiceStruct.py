@@ -39,7 +39,6 @@ class TcpParams(Params):
         self.tcp_chk_ = None
         self.tcp_load_ = None
         self.tcp_len_ = None
-        self.tcp_seglen_ = None
         self.tcp_winsize_ = None
         self.tcp_time_delta_ = None
         self.tcp_time_relative_ = None
@@ -62,6 +61,7 @@ class TlsParams(Params):
         self.exist_tls_ = True
         self.tls_len_ = None
         self.tls_record_version_ = None
+        self.tls_record_content_type_ = None
 
 
 
