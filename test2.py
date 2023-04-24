@@ -1,19 +1,22 @@
 # pyshark测试
 
+import os
 import pyshark
 
-cap = pyshark.FileCapture(input_file="./data/test.pcap", tshark_path="D:/Wireshark/tshark.exe")
-print("-" * 50, "capture:")
-for item in dir(cap):
-    print(item)
+print(os.path.abspath('./data/test.pcap'))
+
+# cap = pyshark.FileCapture(input_file="./data/test.pcap", tshark_path="D:/Wireshark/tshark.exe", only_summaries=True)
+# print("-" * 50, "capture:")
+# for item in dir(cap):
+#     print(item)
 
 # for pkg in cap:
 #     print(pkg)
 
-pkg = cap[0]
+# pkg = cap[0]
 # print(pkg.ip.field_names)
-print(type(pkg))
-print('ip' in pkg)
+# print(type(pkg))
+# print('ip' in pkg)
 # for i in range(3):
 # pkg1 = cap.next()
 # print(pkg1)
